@@ -9,12 +9,12 @@ export function addProduct(req, res){
         })
         return
     }
-    // if(req.user.role != "admin"){
-    //     res.status(403).json({
-    //         messsage: "You are not allowed"
-    //     })
-    //     return
-    // }
+    if(req.user.role != "admin"){
+        res.status(403).json({
+            messsage: "You are not allowed"
+        })
+        return
+    }
 
     const data = req.body;
     const newProduct = new Product(data);
