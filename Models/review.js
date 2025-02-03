@@ -10,6 +10,10 @@ const reviewSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    rating: {  
+        type: Number,
+        required: true,
+    },
     comment: {
         type: String,
         required: true,
@@ -19,15 +23,15 @@ const reviewSchema = new mongoose.Schema({
         required: true,
         default: Date.now()
     },
-    isApproved: {
-        type: Boolean,
-        required: true,
-        default: false
-    },
     profilePicture :{
         type: String,
         required: true,
         default : "https://media.licdn.com/dms/image/v2/D5603AQEhBYaldyR_rg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712338616576?e=2147483647&v=beta&t=bziv00oSahHbPawEkrwZwMN3C2ReWGTKRTRhBkro66k"
+    },
+    isApproved: {
+        type: Boolean,
+        required: true,
+        default: false
     }
 })
 

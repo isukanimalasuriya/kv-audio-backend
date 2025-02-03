@@ -39,12 +39,12 @@ mongoose.connect(mongourl);
 let connection = mongoose.connection
 connection.once("open", ()=>{
     console.log("mongoDB connection established");
-})
+});
 
-app.use("/api/users", userRouter)
-app.use("/api/products", productRouter)
-app.use("/api/reviews", reviewRouter)
+app.use("/api/users", userRouter);
+app.use("/api/products", productRouter);
+app.use("/api/reviews", reviewRouter);
 
 app.listen(3000, ()=>{
     console.log("Server starting");
-})
+});
